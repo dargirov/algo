@@ -1,0 +1,8 @@
+C:\Users\argirov\Desktop\algo\List\ArrayList\obj\Debug\ArrayList.csprojResolveAssemblyReference.cache
+C:\Users\argirov\Desktop\algo\List\ArrayList\bin\Debug\ArrayList.pdb
+C:\Users\argirov\Desktop\algo\List\ArrayList\bin\Debug\IList.dll
+C:\Users\argirov\Desktop\algo\List\ArrayList\bin\Debug\IList.pdb
+C:\Users\argirov\Desktop\algo\List\ArrayList\obj\Debug\ArrayList.pdb
+C:\Users\argirov\Desktop\algo\List\ArrayList\bin\Debug\ArrayList.dll.config
+C:\Users\argirov\Desktop\algo\List\ArrayList\bin\Debug\ArrayList.dll
+C:\Users\argirov\Desktop\algo\List\ArrayList\obj\Debug\ArrayList.dll

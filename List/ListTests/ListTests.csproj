@@ -58,9 +58,9 @@
       <Project>{1f38583b-a991-4b42-9bc2-21f72d2194ef}</Project>
       <Name>ArrayList</Name>
     </ProjectReference>
-    <ProjectReference Include="..\List\List.csproj">
-      <Project>{fc24bbfb-85f9-4224-a332-bce4fbaccec2}</Project>
-      <Name>List</Name>
+    <ProjectReference Include="..\IList\IList.csproj">
+      <Project>{ca085e6a-bed6-4ae3-b396-f8fb41485548}</Project>
+      <Name>IList</Name>
     </ProjectReference>
   </ItemGroup>
   <Choose>

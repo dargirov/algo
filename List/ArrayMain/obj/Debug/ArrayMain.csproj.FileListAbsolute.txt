@@ -1,0 +1,10 @@
+C:\Users\argirov\Desktop\algo\List\ArrayMain\bin\Debug\ArrayMain.exe.config
+C:\Users\argirov\Desktop\algo\List\ArrayMain\bin\Debug\ArrayMain.exe
+C:\Users\argirov\Desktop\algo\List\ArrayMain\bin\Debug\ArrayMain.pdb
+C:\Users\argirov\Desktop\algo\List\ArrayMain\bin\Debug\IList.dll
+C:\Users\argirov\Desktop\algo\List\ArrayMain\bin\Debug\ArrayList.pdb
+C:\Users\argirov\Desktop\algo\List\ArrayMain\bin\Debug\IList.pdb
+C:\Users\argirov\Desktop\algo\List\ArrayMain\obj\Debug\ArrayMain.csprojResolveAssemblyReference.cache
+C:\Users\argirov\Desktop\algo\List\ArrayMain\obj\Debug\ArrayMain.exe
+C:\Users\argirov\Desktop\algo\List\ArrayMain\obj\Debug\ArrayMain.pdb
+C:\Users\argirov\Desktop\algo\List\ArrayMain\bin\Debug\ArrayList.dll
