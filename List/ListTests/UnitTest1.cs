@@ -87,7 +87,7 @@ namespace ListTests
         }
 
         [TestMethod]
-        public virtual void InsertOutOfBounds()
+        public virtual void InsertOutOfRangeTest()
         {
             IList list = this.CreateList();
 
@@ -102,6 +102,46 @@ namespace ListTests
             try
             {
                 list.Insert(1, this.ValueA);
+            }
+            catch (IndexOutOfRangeException e)
+            {
+            }
+        }
+
+        [TestMethod]
+        public virtual void SetTest()
+        {
+            IList list = this.CreateList();
+            list.Add(ValueA);
+            
+            Assert.AreEqual(ValueA, list.Set(0, ValueB));
+            Assert.AreEqual(ValueB, list.Get(0));
+        }
+
+        [TestMethod]
+        public virtual void SetOutOfRangeTest()
+        {
+            IList list = this.CreateList();
+
+            try
+            {
+                list.Set(-1, ValueA);
+            }
+            catch (IndexOutOfRangeException e)
+            {
+            }
+
+            try
+            {
+                list.Set(0, ValueA);
+            }
+            catch (IndexOutOfRangeException e)
+            {
+            }
+
+            try
+            {
+                list.Set(1, ValueA);
             }
             catch (IndexOutOfRangeException e)
             {

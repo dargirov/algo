@@ -70,7 +70,14 @@ namespace List
 
         public int Set(int index, int value)
         {
-            throw new NotImplementedException();
+            if (index < 0 || index >= this.size)
+            {
+                throw new IndexOutOfRangeException();
+            }
+
+            var oldValue = this.array[index];
+            this.array[index] = value;
+            return oldValue;
         }
 
         public int Get(int index)
