@@ -1,15 +1,15 @@
 ﻿namespace List
 {
-    public interface IList
+    public interface IList<T>
     {
-        void Insert(int index, int value);
-        void Add(int value);
-        int Delete(int index);
+        void Insert(int index, T value);
+        void Add(T value);
+        T Delete(int index);
         void Clear();
-        int Set(int index, int value);
-        int Get(int index);
-        int IndexOf(int value);
-        bool Contains(int value);
+        T Set(int index, T value);
+        T Get(int index);
+        int IndexOf(T value);
+        bool Contains(T value);
         int GetSize();
         bool IsEmpty();
     }

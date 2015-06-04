@@ -22,12 +22,14 @@ namespace ListTests
             get { return 3; }
         }
     
-        protected abstract IList CreateList();
+        protected abstract IList<int> CreateList();
+
+        protected abstract IList<int> CreateList(int capacity);
 
         [TestMethod]
         public virtual void InsertIntoEmptyListTest()
         {
-            IList list = this.CreateList();
+            IList<int> list = this.CreateList();
             Assert.AreEqual(0, list.GetSize());
             Assert.IsTrue(list.IsEmpty());
 
@@ -41,7 +43,7 @@ namespace ListTests
         [TestMethod]
         public virtual void InserBetweenElementsTest()
         {
-            IList list = this.CreateList();
+            IList<int> list = this.CreateList();
             list.Add(this.ValueA);
             list.Add(this.ValueC);
 
@@ -58,7 +60,7 @@ namespace ListTests
         [TestMethod]
         public virtual void InsertBeforeFirstTest()
         {
-            IList list = this.CreateList();
+            IList<int> list = this.CreateList();
             list.Add(ValueB);
             list.Add(ValueC);
             list.Insert(0, ValueA);
@@ -72,7 +74,7 @@ namespace ListTests
         [TestMethod]
         public virtual void InserAfterLastTest()
         {
-            IList list = this.CreateList();
+            IList<int> list = this.CreateList();
             list.Add(ValueA);
             list.Add(ValueB);
 
@@ -89,11 +91,12 @@ namespace ListTests
         [TestMethod]
         public virtual void InsertOutOfRangeTest()
         {
-            IList list = this.CreateList();
+            IList<int> list = this.CreateList();
 
             try
             {
                 list.Insert(-1, this.ValueA);
+                Assert.Fail();
             }
             catch (IndexOutOfRangeException e)
             {
@@ -102,6 +105,7 @@ namespace ListTests
             try
             {
                 list.Insert(1, this.ValueA);
+                Assert.Fail();
             }
             catch (IndexOutOfRangeException e)
             {
@@ -111,7 +115,7 @@ namespace ListTests
         [TestMethod]
         public virtual void SetTest()
         {
-            IList list = this.CreateList();
+            IList<int> list = this.CreateList();
             list.Add(ValueA);
             
             Assert.AreEqual(ValueA, list.Set(0, ValueB));
@@ -121,11 +125,12 @@ namespace ListTests
         [TestMethod]
         public virtual void SetOutOfRangeTest()
         {
-            IList list = this.CreateList();
+            IList<int> list = this.CreateList();
 
             try
             {
                 list.Set(-1, ValueA);
+                Assert.Fail();
             }
             catch (IndexOutOfRangeException e)
             {
@@ -134,6 +139,7 @@ namespace ListTests
             try
             {
                 list.Set(0, ValueA);
+                Assert.Fail();
             }
             catch (IndexOutOfRangeException e)
             {
@@ -142,10 +148,159 @@ namespace ListTests
             try
             {
                 list.Set(1, ValueA);
+                Assert.Fail();
             }
             catch (IndexOutOfRangeException e)
             {
             }
+
+            list.Add(this.ValueA);
+            try
+            {
+                list.Set(1, ValueB);
+                Assert.Fail();
+            }
+            catch (IndexOutOfRangeException e)
+            {
+            }
+        }
+
+        [TestMethod]
+        public virtual void DeleteOnlyElementTest()
+        {
+            IList<int> list = this.CreateList();
+            list.Add(ValueA);
+            list.Delete(0);
+
+            Assert.AreEqual(0, list.GetSize());
+            Assert.IsTrue(list.IsEmpty());
+        }
+
+        [TestMethod]
+        public virtual void DeleteFirstElementTest()
+        {
+            IList<int> list = this.CreateList();
+            list.Add(ValueA);
+            list.Add(ValueB);
+            list.Add(ValueC);
+
+            list.Delete(0);
+            Assert.AreEqual(2, list.GetSize());
+            Assert.AreEqual(ValueB, list.Get(0));
+            Assert.AreEqual(ValueC, list.Get(1));
+        }
+
+        [TestMethod]
+        public virtual void DeleteLastElementTest()
+        {
+            IList<int> list = this.CreateList();
+            list.Add(ValueA);
+            list.Add(ValueB);
+            list.Add(ValueC);
+
+            Assert.AreEqual(3, list.GetSize());
+
+            list.Delete(2);
+
+            Assert.AreEqual(2, list.GetSize());
+            Assert.AreEqual(ValueA, list.Get(0));
+            Assert.AreEqual(ValueB, list.Get(1));
+        }
+
+        [TestMethod]
+        public virtual void DeleteOutOfRangeTest()
+        {
+            IList<int> list = this.CreateList();
+            
+            try
+            {
+                list.Delete(0);
+                Assert.Fail();
+            }
+            catch (IndexOutOfRangeException e)
+            {
+            }
+
+            list.Add(ValueA);
+
+            try
+            {
+                list.Delete(1);
+                Assert.Fail();
+            }
+            catch (IndexOutOfRangeException e)
+            {
+            }
+
+            var value = list.Delete(0);
+            Assert.AreEqual(ValueA, value);
+
+            try
+            {
+                list.Delete(0);
+                Assert.Fail();
+            }
+            catch (IndexOutOfRangeException e)
+            {
+            }
+        }
+
+        [TestMethod]
+        public virtual void DeleteMiddleElementTest()
+        {
+            IList<int> list = this.CreateList();
+            list.Add(ValueA);
+            list.Add(ValueB);
+            list.Add(ValueC);
+
+            list.Delete(1);
+
+            Assert.AreEqual(2, list.GetSize());
+            Assert.AreEqual(ValueA, list.Get(0));
+            Assert.AreEqual(ValueC, list.Get(1));
+        }
+
+        [TestMethod]
+        public virtual void IndexOfTest()
+        {
+            IList<int> list = this.CreateList();
+            list.Add(ValueA);
+            list.Add(ValueB);
+            list.Add(ValueA);
+
+            Assert.AreEqual(0, list.IndexOf(ValueA));
+            Assert.AreEqual(1, list.IndexOf(ValueB));
+            Assert.AreEqual(-1, list.IndexOf(ValueC));
+        }
+
+        [TestMethod]
+        public virtual void ContainsTest()
+        {
+            IList<int> list = this.CreateList();
+            list.Add(ValueA);
+            list.Add(ValueB);
+
+            Assert.IsTrue(list.Contains(ValueA));
+            Assert.IsTrue(list.Contains(ValueB));
+            Assert.IsFalse(list.Contains(ValueC));
+        }
+
+        [TestMethod]
+        public virtual void ClearListTest()
+        {
+            IList<int> list = this.CreateList();
+            list.Add(ValueA);
+            list.Add(ValueB);
+            list.Add(ValueB);
+            list.Add(ValueA);
+            list.Add(ValueC);
+
+            Assert.AreEqual(5, list.GetSize());
+            
+            list.Clear();
+
+            Assert.AreEqual(0, list.GetSize());
+            Assert.IsTrue(list.IsEmpty());
         }
     }
 
@@ -154,13 +309,37 @@ namespace ListTests
     {
         public ArrayListTest()
         {
-            //this.list = this.CreateList();
         }
 
-        protected override IList CreateList()
+        protected override IList<int> CreateList()
         {
-            return new ArrayList();
+            return new ArrayList<int>();
+        }
+        
+
+        protected override IList<int> CreateList(int capacity)
+        {
+            return new ArrayList<int>(capacity);
         }
 
+        [TestMethod]
+        public void ResizeBeyondInitialCapacityTest()
+        {
+            IList<int> list = this.CreateList(4);
+            list.Add(ValueA);
+            list.Add(ValueB);
+            list.Add(ValueC);
+            list.Add(ValueA);
+            list.Add(ValueB);
+            list.Add(ValueC);
+
+            Assert.AreEqual(6, list.GetSize());
+            Assert.AreEqual(ValueA, list.Get(0));
+            Assert.AreEqual(ValueB, list.Get(1));
+            Assert.AreEqual(ValueC, list.Get(2));
+            Assert.AreEqual(ValueA, list.Get(3));
+            Assert.AreEqual(ValueB, list.Get(4));
+            Assert.AreEqual(ValueC, list.Get(5));
+        }
     }
 }
