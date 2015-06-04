@@ -1,9 +1,0 @@
-C:\Users\argirov\Desktop\algo\List\ListTests\obj\Debug\ListTests.csprojResolveAssemblyReference.cache
-C:\Users\argirov\Desktop\algo\List\ListTests\bin\Debug\ListTests.dll
-C:\Users\argirov\Desktop\algo\List\ListTests\bin\Debug\ListTests.pdb
-C:\Users\argirov\Desktop\algo\List\ListTests\bin\Debug\ArrayList.dll
-C:\Users\argirov\Desktop\algo\List\ListTests\bin\Debug\IList.dll
-C:\Users\argirov\Desktop\algo\List\ListTests\bin\Debug\ArrayList.pdb
-C:\Users\argirov\Desktop\algo\List\ListTests\bin\Debug\IList.pdb
-C:\Users\argirov\Desktop\algo\List\ListTests\obj\Debug\ListTests.dll
-C:\Users\argirov\Desktop\algo\List\ListTests\obj\Debug\ListTests.pdb
