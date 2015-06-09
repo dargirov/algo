@@ -14,6 +14,11 @@ namespace ArrayMain
             arrayList.Add(4);
             arrayList.Add(5);
 
+            IIterator<int> iterator = arrayList.Iterator();
+            iterator.First();
+            Console.WriteLine(iterator.Current());
+
+
             /*foreach (var i in arrayList)
             {
                 Console.WriteLine(i);

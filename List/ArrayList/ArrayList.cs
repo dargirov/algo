@@ -9,7 +9,6 @@ namespace List
         private T[] array;
         private const int defaultCapacity = 16;
         private int capacity;
-        private int enumeratorIndex;
 
         public ArrayList() : this(defaultCapacity)
         {
@@ -91,7 +90,6 @@ namespace List
         {
             this.array = new T[this.capacity];
             this.size = 0;
-            this.enumeratorIndex = -1;
         }
 
         public T Set(int index, T value)

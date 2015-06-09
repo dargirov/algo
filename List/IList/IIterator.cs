@@ -9,7 +9,7 @@ namespace List
         void Last();
         bool IsDone();
         void Next();
-        void Previus();
+        void Previous();
         T Current();
     }
 }

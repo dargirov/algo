@@ -302,7 +302,92 @@ namespace ListTests
             Assert.AreEqual(0, list.GetSize());
             Assert.IsTrue(list.IsEmpty());
         }
-    }
 
-    
+        [TestMethod]
+        public virtual void EmptyIterationTest()
+        {
+            IList<int> list = this.CreateList();
+            IIterator<int> iterator = list.Iterator();
+
+            Assert.AreEqual(0, list.GetSize());
+            Assert.IsTrue(iterator.IsDone());
+
+            try
+            {
+                iterator.Current();
+                Assert.Fail();
+            }
+            catch (IndexOutOfRangeException e)
+            {
+            }
+        }
+
+        [TestMethod]
+        public virtual void ForwardIterationTest()
+        {
+            IList<int> list = this.CreateList();
+            list.Add(ValueA);
+            list.Add(ValueB);
+            list.Add(ValueC);
+
+            IIterator<int> iterator = list.Iterator();
+            iterator.First();
+
+            Assert.IsFalse(iterator.IsDone());
+            Assert.AreEqual(ValueA, iterator.Current());
+
+            iterator.Next();
+            Assert.IsFalse(iterator.IsDone());
+            Assert.AreEqual(ValueB, iterator.Current());
+
+            iterator.Next();
+            Assert.IsFalse(iterator.IsDone());
+            Assert.AreEqual(ValueC, iterator.Current());
+
+            iterator.Next();
+            Assert.IsTrue(iterator.IsDone());
+            try
+            {
+                iterator.Current();
+                Assert.Fail();
+            }
+            catch (IndexOutOfRangeException e)
+            {
+            }
+        }
+
+        [TestMethod]
+        public virtual void BackwardIterationTest()
+        {
+            IList<int> list = this.CreateList();
+            list.Add(ValueA);
+            list.Add(ValueB);
+            list.Add(ValueC);
+
+            IIterator<int> iterator = list.Iterator();
+            iterator.Last();
+
+            Assert.IsFalse(iterator.IsDone());
+            Assert.AreEqual(ValueC, iterator.Current());
+
+            iterator.Previous();
+            Assert.IsFalse(iterator.IsDone());
+            Assert.AreEqual(ValueB, iterator.Current());
+
+            iterator.Previous();
+            Assert.IsFalse(iterator.IsDone());
+            Assert.AreEqual(ValueA, iterator.Current());
+
+            iterator.Previous();
+            Assert.IsTrue(iterator.IsDone());
+            try
+            {
+                iterator.Current();
+                Assert.Fail();
+            }
+            catch (IndexOutOfRangeException e)
+            {
+            }
+        }
+    }
 }

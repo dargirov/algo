@@ -37,16 +37,16 @@ namespace List
             this.current++;
         }
 
-        public void Previus()
+        public void Previous()
         {
-            this.last--;
+            this.current--;
         }
 
         public T Current()
         {
             if (this.IsDone())
             {
-                throw new ArgumentOutOfRangeException();
+                throw new IndexOutOfRangeException();
             }
 
             return this.array[this.current];
