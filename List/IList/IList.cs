@@ -1,6 +1,6 @@
 ﻿namespace List
 {
-    public interface IList<T>
+    public interface IList<T> : IIterable<T>
     {
         void Insert(int index, T value);
         void Add(T value);

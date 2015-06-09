@@ -11,6 +11,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "IList", "IList\IList.csproj
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ArrayMain", "ArrayMain\ArrayMain.csproj", "{CEC10608-4117-4E02-92F3-2221D8A04360}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LinkedList", "LinkedList\LinkedList.csproj", "{F502D743-8E61-4FFD-A794-E433E2230E51}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -33,6 +35,10 @@ Global
 		{CEC10608-4117-4E02-92F3-2221D8A04360}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{CEC10608-4117-4E02-92F3-2221D8A04360}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{CEC10608-4117-4E02-92F3-2221D8A04360}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F502D743-8E61-4FFD-A794-E433E2230E51}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F502D743-8E61-4FFD-A794-E433E2230E51}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F502D743-8E61-4FFD-A794-E433E2230E51}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F502D743-8E61-4FFD-A794-E433E2230E51}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

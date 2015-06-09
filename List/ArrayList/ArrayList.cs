@@ -3,7 +3,7 @@ using System.Collections.Generic;
 
 namespace List
 {
-    public class ArrayList<T> : IList<T>, IEnumerable<T>
+    public class ArrayList<T> : IList<T>
     {
         private int size;
         private T[] array;
@@ -131,23 +131,9 @@ namespace List
             return this.IndexOf(value) != -1;
         }
 
-        public IEnumerator<T> GetEnumerator()
+        public List.IIterator<T> Iterator()
         {
-            int count = 0;
-            foreach (var i in this.array)
-            {
-                if (count++ == this.size)
-                {
-                    break;
-                }
-
-                yield return i;
-            }
-        }
-
-        System.Collections.IEnumerator System.Collections.IEnumerable.GetEnumerator()
-        {
-            return this.GetEnumerator();
+            return new ArrayIterator<T>(this.array, 0, this.size);
         }
     }
 }

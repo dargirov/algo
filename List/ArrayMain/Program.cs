@@ -14,10 +14,10 @@ namespace ArrayMain
             arrayList.Add(4);
             arrayList.Add(5);
 
-            foreach (var i in arrayList)
+            /*foreach (var i in arrayList)
             {
                 Console.WriteLine(i);
-            }
+            }*/
 
         }
     }
