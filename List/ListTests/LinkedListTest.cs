@@ -5,12 +5,15 @@ using List;
 namespace ListTests
 {
     [TestClass]
-    class LinkedListTest : AbstractListTest
+    public class LinkedListTest : AbstractListTest
     {
+        public LinkedListTest()
+        {
+        }
+
         protected override IList<int> CreateList()
         {
-            //return new LinkedList<int>();
-            throw new NotImplementedException();
+            return new LinkedList<int>();
         }
 
         protected override IList<int> CreateList(int capacity)

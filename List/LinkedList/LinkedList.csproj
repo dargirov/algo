@@ -39,8 +39,10 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Element.cs" />
     <Compile Include="LinkedList.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="ValueIterator.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\IList\IList.csproj">

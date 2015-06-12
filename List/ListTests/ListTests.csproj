@@ -50,7 +50,9 @@
     </Otherwise>
   </Choose>
   <ItemGroup>
-    <Compile Include="UnitTest1.cs" />
+    <Compile Include="AbstractListTest.cs" />
+    <Compile Include="ArrayListTest.cs" />
+    <Compile Include="LinkedListTest.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -61,6 +63,10 @@
     <ProjectReference Include="..\IList\IList.csproj">
       <Project>{ca085e6a-bed6-4ae3-b396-f8fb41485548}</Project>
       <Name>IList</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\LinkedList\LinkedList.csproj">
+      <Project>{f502d743-8e61-4ffd-a794-e433e2230e51}</Project>
+      <Name>LinkedList</Name>
     </ProjectReference>
   </ItemGroup>
   <Choose>

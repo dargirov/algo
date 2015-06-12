@@ -1,5 +1,0 @@
-C:\Users\argirov\Desktop\algo\List\IList\bin\Debug\IList.dll
-C:\Users\argirov\Desktop\algo\List\IList\bin\Debug\IList.pdb
-C:\Users\argirov\Desktop\algo\List\IList\obj\Debug\IList.csprojResolveAssemblyReference.cache
-C:\Users\argirov\Desktop\algo\List\IList\obj\Debug\IList.dll
-C:\Users\argirov\Desktop\algo\List\IList\obj\Debug\IList.pdb
