@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Text;
 
 namespace List
 {
@@ -28,13 +29,26 @@ namespace List
 
         private Element<T> GetElement(int index)
         {
-            var element = this.headAndTail.GetNext();
-            for (int i = index; i > 0; i--)
+            if (index < this.GetSize() / 2)
             {
-                element = element.GetNext();
-            }
+                var element = this.headAndTail.GetNext();
+                for (int i = index; i > 0; i--)
+                {
+                    element = element.GetNext();
+                }
 
-            return element;
+                return element;
+            }
+            else
+            {
+                var element = this.headAndTail;
+                for (int i = this.GetSize() - index; i > 0; i--)
+                {
+                    element = element.GetPrevious();
+                }
+                
+                return element;
+            }
         }
 
         public void Add(T value)
@@ -119,6 +133,24 @@ namespace List
         public IIterator<T> Iterator()
         {
             return new ValueIterator<T>(this.headAndTail);
+        }
+
+        public override string ToString()
+        {
+            var result = new StringBuilder();
+            result.Append("[");
+            if (!this.IsEmpty())
+            {
+                IIterator<T> i = this.Iterator();
+                for (i.First(); !i.IsDone(); i.Next())
+                {
+                    result.Append(string.Format("{0}, ", i.Current()));
+                }
+
+                result.Remove(result.Length - 2, 2);
+            }
+            result.Append("]");
+            return result.ToString();
         }
     }
 }

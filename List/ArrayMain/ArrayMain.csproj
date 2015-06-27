@@ -56,6 +56,10 @@
       <Project>{ca085e6a-bed6-4ae3-b396-f8fb41485548}</Project>
       <Name>IList</Name>
     </ProjectReference>
+    <ProjectReference Include="..\LinkedList\LinkedList.csproj">
+      <Project>{f502d743-8e61-4ffd-a794-e433e2230e51}</Project>
+      <Name>LinkedList</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

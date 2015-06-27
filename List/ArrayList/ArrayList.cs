@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Text;
 
 namespace List
 {
@@ -18,6 +19,14 @@ namespace List
         {
             this.capacity = capacity;
             this.Clear();
+        }
+
+        public ArrayList(T[] values) : this(defaultCapacity)
+        {
+            foreach (var value in values)
+            {
+                this.Add(value);
+            }
         }
 
         public int GetSize()
@@ -132,6 +141,24 @@ namespace List
         public List.IIterator<T> Iterator()
         {
             return new ArrayIterator<T>(this.array, 0, this.size);
+        }
+
+        public override string ToString()
+        {
+            var result = new StringBuilder();
+            result.Append("[");
+            if (!this.IsEmpty())
+            {
+                IIterator<T> i = this.Iterator();
+                for (i.First(); !i.IsDone(); i.Next())
+                {
+                    result.Append(string.Format("{0}, ", i.Current()));
+                }
+
+                result.Remove(result.Length - 2, 2);
+            }
+            result.Append("]");
+            return result.ToString();
         }
     }
 }
