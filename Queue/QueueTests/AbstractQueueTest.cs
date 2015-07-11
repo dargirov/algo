@@ -33,7 +33,7 @@ namespace QueueTests
             
             try
             {
-                queue.dequeue();
+                queue.Dequeue();
                 Assert.Fail();
             }
             catch (IndexOutOfRangeException e)
@@ -45,28 +45,28 @@ namespace QueueTests
         public virtual void EnqueueDequeueTest()
         {
             IQueue<int> queue = this.CreateQueue();
-            queue.enqueue(this.ValueA);
-            queue.enqueue(this.ValueB);
-            queue.enqueue(this.ValueC);
+            queue.Enqueue(this.ValueA);
+            queue.Enqueue(this.ValueB);
+            queue.Enqueue(this.ValueC);
 
             Assert.AreEqual(3, queue.GetSize());
             Assert.IsFalse(queue.IsEmpty());
 
-            Assert.AreEqual(ValueA, queue.dequeue());
+            Assert.AreEqual(ValueA, queue.Dequeue());
             Assert.AreEqual(2, queue.GetSize());
             Assert.IsFalse(queue.IsEmpty());
 
-            Assert.AreEqual(ValueB, queue.dequeue());
+            Assert.AreEqual(ValueB, queue.Dequeue());
             Assert.AreEqual(1, queue.GetSize());
             Assert.IsFalse(queue.IsEmpty());
 
-            Assert.AreEqual(ValueC, queue.dequeue());
+            Assert.AreEqual(ValueC, queue.Dequeue());
             Assert.AreEqual(0, queue.GetSize());
             Assert.IsTrue(queue.IsEmpty());
 
             try
             {
-                queue.dequeue();
+                queue.Dequeue();
                 Assert.Fail();
             }
             catch (IndexOutOfRangeException e)
@@ -78,9 +78,9 @@ namespace QueueTests
         public virtual void ClearTest()
         {
             IQueue<int> queue = this.CreateQueue();
-            queue.enqueue(this.ValueA);
-            queue.enqueue(this.ValueB);
-            queue.enqueue(this.ValueC);
+            queue.Enqueue(this.ValueA);
+            queue.Enqueue(this.ValueB);
+            queue.Enqueue(this.ValueC);
 
             queue.Clear();
 
@@ -89,7 +89,7 @@ namespace QueueTests
 
             try
             {
-                queue.dequeue();
+                queue.Dequeue();
                 Assert.Fail();
             }
             catch (IndexOutOfRangeException e)

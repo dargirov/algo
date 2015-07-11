@@ -13,12 +13,12 @@ namespace ListQueue
             this.list = new LinkedList<T>();
         }
 
-        public void enqueue(T value)
+        public void Enqueue(T value)
         {
             this.list.AddLast(value);
         }
 
-        public T dequeue()
+        public T Dequeue()
         {
             if (this.list.Count == 0)
             {

@@ -11,6 +11,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "QueueTests", "QueueTests\Qu
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ListQueue", "ListQueue\ListQueue.csproj", "{6E5E3B97-B189-402F-AFEA-432A15C3C636}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BlockingQueue", "BlockingQueue\BlockingQueue.csproj", "{C7C6BDC3-719A-4622-9D1D-01A4F7A4D3F7}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -33,6 +35,10 @@ Global
 		{6E5E3B97-B189-402F-AFEA-432A15C3C636}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{6E5E3B97-B189-402F-AFEA-432A15C3C636}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{6E5E3B97-B189-402F-AFEA-432A15C3C636}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C7C6BDC3-719A-4622-9D1D-01A4F7A4D3F7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C7C6BDC3-719A-4622-9D1D-01A4F7A4D3F7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C7C6BDC3-719A-4622-9D1D-01A4F7A4D3F7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C7C6BDC3-719A-4622-9D1D-01A4F7A4D3F7}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

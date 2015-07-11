@@ -2,8 +2,8 @@
 {
     public interface IQueue<T>
     {
-        void enqueue(T value);
-        T dequeue();
+        void Enqueue(T value);
+        T Dequeue();
         void Clear();
         bool IsEmpty();
         int GetSize();

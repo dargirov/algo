@@ -1,15 +1,19 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+using IQueue;
+using ListQueue;
+using BlockingQueue;
 
 namespace Queue
 {
     class Program
     {
-        static void Main(string[] args)
+        static void Main()
         {
+            IQueue<int> queue = new BlockingQueue<int>();
+            queue.Enqueue(1);
+            queue.Enqueue(2);
+            queue.Enqueue(3);
+            Console.WriteLine("{0}, {1}, {2}", queue.Dequeue(), queue.Dequeue(), queue.Dequeue());
         }
     }
 }
