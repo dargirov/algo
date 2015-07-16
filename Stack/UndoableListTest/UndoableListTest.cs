@@ -13,15 +13,11 @@ namespace UndoableListTest
         {
         }
 
-        protected override IList<int> CreateList()
-        {
-            return new UndoableList<int>(new LinkedList<int>());
-        }
 
         [TestMethod]
         public void UndoInsertTest()
         {
-            var list = this.CreateList();
+            var list = new UndoableList<int>(new LinkedList<int>());
 
             Assert.IsFalse(list.CanUndo());
 
@@ -36,7 +32,7 @@ namespace UndoableListTest
         [TestMethod]
         public void UndoAddTest()
         {
-            var list = this.CreateList();
+            var list = new UndoableList<int>(new LinkedList<int>());
 
             Assert.IsFalse(list.CanUndo());
 
@@ -51,7 +47,7 @@ namespace UndoableListTest
         [TestMethod]
         public void UndoDeleteByPosition()
         {
-            var list = this.CreateList();
+            var list = new UndoableList<int>(new LinkedList<int>());
             list.Add(this.ValueA);
             list.Add(this.ValueB);
 
@@ -61,9 +57,32 @@ namespace UndoableListTest
             list.Undo();
 
             Assert.AreEqual(2, list.GetSize());
-            Assert.AreEqual(this.ValueA, list.Delete(0));
-            Assert.AreEqual(this.ValueB, list.Delete(1));
-            Assert.IsFalse(list.CanUndo());
+            Assert.AreEqual(this.ValueA, list.Get(0));
+            Assert.AreEqual(this.ValueB, list.Get(1));
+            Assert.IsTrue(list.CanUndo());
+        }
+
+        [TestMethod]
+        public void UndoSetTest()
+        {
+            var list = new UndoableList<int>(new LinkedList<int>());
+            list.Add(this.ValueA);
+            Assert.AreEqual(this.ValueA, list.Get(0));
+            list.Set(0, this.ValueB);
+            Assert.AreEqual(this.ValueB, list.Get(0));
+
+            list.Undo();
+            Assert.AreEqual(this.ValueA, list.Get(0));
+        }
+
+        protected override IList<int> CreateList()
+        {
+            throw new NotImplementedException();
+        }
+
+        protected override IList<int> CreateList(int capacity)
+        {
+            throw new NotImplementedException();
         }
     }
 }

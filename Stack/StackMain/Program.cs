@@ -1,5 +1,6 @@
 ﻿using System;
 using List;
+using UndoableList;
 
 namespace StackMain
 {
@@ -7,7 +8,8 @@ namespace StackMain
     {
         static void Main()
         {
-            var list = new LinkedList<int>();
+            var list = new UndoableList<int>(new LinkedList<int>());
+            list.Add(1);
         }
     }
 }

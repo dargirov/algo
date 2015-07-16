@@ -64,6 +64,10 @@
       <Project>{0762393a-b1df-4223-9560-4decd18852e9}</Project>
       <Name>ListStack</Name>
     </ProjectReference>
+    <ProjectReference Include="..\UndoableList\UndoableList.csproj">
+      <Project>{4e274ac5-48e1-4932-8cb1-6111cc9cf1a9}</Project>
+      <Name>UndoableList</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

@@ -66,6 +66,10 @@
       <Project>{4515a0dc-974d-4088-b675-9bc0379716a3}</Project>
       <Name>ListTests</Name>
     </ProjectReference>
+    <ProjectReference Include="..\ListStack\ListStack.csproj">
+      <Project>{0762393a-b1df-4223-9560-4decd18852e9}</Project>
+      <Name>ListStack</Name>
+    </ProjectReference>
     <ProjectReference Include="..\UndoableList\UndoableList.csproj">
       <Project>{4e274ac5-48e1-4932-8cb1-6111cc9cf1a9}</Project>
       <Name>UndoableList</Name>
