@@ -2,22 +2,22 @@
 using System.Text;
 using System.Collections.Generic;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
-
 using IListSorter;
-using Bubble;
+
+using Selection;
 
 namespace SortTests
 {
     [TestClass]
-    public class BubbleSortTest : AbstractSorterTest
+    public class SelectionSortTest : AbstractSorterTest
     {
-        public BubbleSortTest()
+        public SelectionSortTest()
         {
         }
 
         protected override IListSorter<string> CreateListSorter()
         {
-            return new BubbleSortList<string>();
+            return new SelectionSortList<string>();
         }
     }
 }

@@ -1,36 +1,28 @@
 ﻿using System;
-using System.Collections;
 using System.Collections.Generic;
 
 using IListSorter;
 
-namespace Bubble
+namespace Selection
 {
-    class Program
+    public class SelectionSortList<T> : IListSorter<T> where T : IComparable
     {
-        static void Main()
-        {
-        }
-    }
-
-    public class Bubble<T> : IListSorter<T> where T : IComparable
-    {
-
         public IList<T> Sort(IList<T> list)
         {
             int size = list.Count;
 
-            for (int i = 1; i < size; i++)
+            for (int i = 0; i < size - 1; i++)
             {
-                for (int j = 0; j < size - i; j++)
+                int smallest = i;
+                for (int j = i + 1; j < size; j++)
                 {
-                    var left = list[j];
-                    var right = list[j + 1];
-                    if (left.CompareTo(right) > 0)
+                    if (list[j].CompareTo(list[smallest]) < 0)
                     {
-                        this.Swap(list, j, j + 1);
+                        smallest = j;
                     }
                 }
+
+                this.Swap(list, i, smallest);
             }
 
             return list;
@@ -38,6 +30,11 @@ namespace Bubble
 
         private void Swap(IList<T> list, int left, int right)
         {
+            if (left == right)
+            {
+                return;
+            }
+
             var temp = list[left];
             list[left] = list[right];
             list[right] = temp;
