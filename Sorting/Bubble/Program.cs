@@ -2,42 +2,20 @@
 using System.Collections;
 using System.Collections.Generic;
 
+using IListSorter;
+
 namespace Bubble
 {
     class Program
     {
         static void Main()
         {
-            IList<string> testStrings = new List<string>();
-            testStrings.Add("Pesho");
-            testStrings.Add("Gosho");
-            testStrings.Add("Ivan");
-
-            IList<int> testInts = new List<int>();
-            testInts.Add(4);
-            testInts.Add(7);
-            testInts.Add(6);
-            testInts.Add(1);
-            testInts.Add(3);
-            testInts.Add(2);
-            testInts.Add(9);
-            testInts.Add(7);
-            testInts.Add(8);
-            testInts.Add(2);
-            testInts.Add(5);
-            testInts.Add(0);
-
-            var sortedStrings = new Bubble<string>();
-            var sortedInts = new Bubble<int>();
-
-
-            Console.WriteLine(string.Join(", ", sortedStrings.Sort(testStrings)));
-            Console.WriteLine(string.Join(", ", sortedInts.Sort(testInts)));
         }
     }
 
-    public class Bubble<T> where T : IComparable
+    public class Bubble<T> : IListSorter<T> where T : IComparable
     {
+
         public IList<T> Sort(IList<T> list)
         {
             int size = list.Count;
