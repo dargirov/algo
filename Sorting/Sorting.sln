@@ -13,6 +13,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Selection", "Selection\Sele
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SortingMain", "SortingMain\SortingMain.csproj", "{AD0F119C-C384-48A7-8413-E7CDD9ECB203}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Insertion", "Insertion\Insertion.csproj", "{1BE6A7A7-BC77-4280-AB74-ED02525F9E4B}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -39,6 +41,10 @@ Global
 		{AD0F119C-C384-48A7-8413-E7CDD9ECB203}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{AD0F119C-C384-48A7-8413-E7CDD9ECB203}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{AD0F119C-C384-48A7-8413-E7CDD9ECB203}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1BE6A7A7-BC77-4280-AB74-ED02525F9E4B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1BE6A7A7-BC77-4280-AB74-ED02525F9E4B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1BE6A7A7-BC77-4280-AB74-ED02525F9E4B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1BE6A7A7-BC77-4280-AB74-ED02525F9E4B}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

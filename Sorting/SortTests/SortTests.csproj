@@ -54,6 +54,7 @@
   <ItemGroup>
     <Compile Include="AbstractSorterTest.cs" />
     <Compile Include="BubbleSortTest.cs" />
+    <Compile Include="InsertionSortTest.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="SelectionSortTest.cs" />
   </ItemGroup>
@@ -65,6 +66,10 @@
     <ProjectReference Include="..\IListSorter\IListSorter.csproj">
       <Project>{2ed9e804-b5d3-4086-97e6-0c74f95652fc}</Project>
       <Name>IListSorter</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Insertion\Insertion.csproj">
+      <Project>{1be6a7a7-bc77-4280-ab74-ed02525f9e4b}</Project>
+      <Name>Insertion</Name>
     </ProjectReference>
     <ProjectReference Include="..\Selection\Selection.csproj">
       <Project>{24beebe3-8ea3-4259-818d-9b1501720b22}</Project>

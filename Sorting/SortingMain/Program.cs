@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 
 using Bubble;
 using Selection;
+using Insertion;
 
 namespace SortingMain
 {
@@ -39,6 +40,9 @@ namespace SortingMain
 
             var bubbleSorter = new BubbleSortList<string>();
             Console.WriteLine(string.Join(", ", bubbleSorter.Sort(listStrings)));
+
+            var insertionSorter = new InsertionSortList<int>();
+            Console.WriteLine(string.Join(", ", insertionSorter.Sort(listInts)));
         }
     }
 }
