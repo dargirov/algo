@@ -1,13 +1,11 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 using Bubble;
 using Selection;
 using Insertion;
 using Shell;
+using Quick;
 
 namespace SortingMain
 {
@@ -36,17 +34,8 @@ namespace SortingMain
             listStrings.Add("Pleven");
             listStrings.Add("Burgas");
 
-            var selectionSorter = new SelectionSortList<int>();
-            Console.WriteLine(string.Join(", ", selectionSorter.Sort(listInts)));
-
-            var bubbleSorter = new BubbleSortList<string>();
-            Console.WriteLine(string.Join(", ", bubbleSorter.Sort(listStrings)));
-
-            var insertionSorter = new InsertionSortList<int>();
-            Console.WriteLine(string.Join(", ", insertionSorter.Sort(listInts)));
-
-            var shellSorter = new ShellSortList<int>();
-            Console.WriteLine(string.Join(", ", shellSorter.Sort(listInts))); 
+            var quickSorter = new QuickSortList<int>();
+            Console.WriteLine(string.Join(", ", quickSorter.Sort(listInts)));
         }
     }
 }

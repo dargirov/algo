@@ -56,6 +56,7 @@
     <Compile Include="BubbleSortTest.cs" />
     <Compile Include="InsertionSortTest.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="QuickSortTest.cs" />
     <Compile Include="SelectionSortTest.cs" />
     <Compile Include="ShellSortTest.cs" />
   </ItemGroup>
@@ -71,6 +72,10 @@
     <ProjectReference Include="..\Insertion\Insertion.csproj">
       <Project>{1be6a7a7-bc77-4280-ab74-ed02525f9e4b}</Project>
       <Name>Insertion</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Quick\Quick.csproj">
+      <Project>{041afde3-97a9-48eb-8f01-b0686047c995}</Project>
+      <Name>Quick</Name>
     </ProjectReference>
     <ProjectReference Include="..\Selection\Selection.csproj">
       <Project>{24beebe3-8ea3-4259-818d-9b1501720b22}</Project>
