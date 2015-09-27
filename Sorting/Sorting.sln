@@ -19,6 +19,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Shell", "Shell\Shell.csproj
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Quick", "Quick\Quick.csproj", "{041AFDE3-97A9-48EB-8F01-B0686047C995}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Merge", "Merge\Merge.csproj", "{D7A7CA05-13C6-47B0-871B-778B2C195A52}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -57,6 +59,10 @@ Global
 		{041AFDE3-97A9-48EB-8F01-B0686047C995}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{041AFDE3-97A9-48EB-8F01-B0686047C995}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{041AFDE3-97A9-48EB-8F01-B0686047C995}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D7A7CA05-13C6-47B0-871B-778B2C195A52}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D7A7CA05-13C6-47B0-871B-778B2C195A52}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D7A7CA05-13C6-47B0-871B-778B2C195A52}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D7A7CA05-13C6-47B0-871B-778B2C195A52}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

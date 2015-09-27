@@ -6,6 +6,7 @@ using Selection;
 using Insertion;
 using Shell;
 using Quick;
+using Merge;
 
 namespace SortingMain
 {
@@ -14,16 +15,15 @@ namespace SortingMain
         static void Main(string[] args)
         {
             var listInts = new List<int>();
-            listInts.Add(5);
             listInts.Add(3);
-            listInts.Add(7);
-            listInts.Add(9);
-            listInts.Add(2);
             listInts.Add(1);
             listInts.Add(4);
-            listInts.Add(3);
-            listInts.Add(6);
             listInts.Add(8);
+            listInts.Add(5);
+            listInts.Add(2);
+            listInts.Add(7);
+            listInts.Add(9);
+            listInts.Add(3);
 
             var listStrings = new List<string>();
             listStrings.Add("Sofia");
@@ -34,8 +34,8 @@ namespace SortingMain
             listStrings.Add("Pleven");
             listStrings.Add("Burgas");
 
-            var quickSorter = new QuickSortList<int>();
-            Console.WriteLine(string.Join(", ", quickSorter.Sort(listInts)));
+            var mergeSort = new MergeSortList<int>();
+            Console.WriteLine(string.Join(", ", mergeSort.Sort(listInts)));
         }
     }
 }

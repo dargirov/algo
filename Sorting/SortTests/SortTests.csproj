@@ -55,6 +55,7 @@
     <Compile Include="AbstractSorterTest.cs" />
     <Compile Include="BubbleSortTest.cs" />
     <Compile Include="InsertionSortTest.cs" />
+    <Compile Include="MergeSortTest.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="QuickSortTest.cs" />
     <Compile Include="SelectionSortTest.cs" />
@@ -72,6 +73,10 @@
     <ProjectReference Include="..\Insertion\Insertion.csproj">
       <Project>{1be6a7a7-bc77-4280-ab74-ed02525f9e4b}</Project>
       <Name>Insertion</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Merge\Merge.csproj">
+      <Project>{d7a7ca05-13c6-47b0-871b-778b2c195a52}</Project>
+      <Name>Merge</Name>
     </ProjectReference>
     <ProjectReference Include="..\Quick\Quick.csproj">
       <Project>{041afde3-97a9-48eb-8f01-b0686047c995}</Project>

@@ -4,17 +4,15 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{AD0F119C-C384-48A7-8413-E7CDD9ECB203}</ProjectGuid>
-    <OutputType>Exe</OutputType>
+    <ProjectGuid>{D7A7CA05-13C6-47B0-871B-778B2C195A52}</ProjectGuid>
+    <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>SortingMain</RootNamespace>
-    <AssemblyName>SortingMain</AssemblyName>
+    <RootNamespace>Merge</RootNamespace>
+    <AssemblyName>Merge</AssemblyName>
     <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
-    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
-    <PlatformTarget>AnyCPU</PlatformTarget>
     <DebugSymbols>true</DebugSymbols>
     <DebugType>full</DebugType>
     <Optimize>false</Optimize>
@@ -24,7 +22,6 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
-    <PlatformTarget>AnyCPU</PlatformTarget>
     <DebugType>pdbonly</DebugType>
     <Optimize>true</Optimize>
     <OutputPath>bin\Release\</OutputPath>
@@ -43,36 +40,13 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Program.cs" />
+    <Compile Include="MergeSortList.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="App.config" />
-  </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="..\Bubble\Bubble.csproj">
-      <Project>{ed95f005-9d98-4051-ab01-aa3d11731aff}</Project>
-      <Name>Bubble</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\Insertion\Insertion.csproj">
-      <Project>{1be6a7a7-bc77-4280-ab74-ed02525f9e4b}</Project>
-      <Name>Insertion</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\Merge\Merge.csproj">
-      <Project>{d7a7ca05-13c6-47b0-871b-778b2c195a52}</Project>
-      <Name>Merge</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\Quick\Quick.csproj">
-      <Project>{041afde3-97a9-48eb-8f01-b0686047c995}</Project>
-      <Name>Quick</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\Selection\Selection.csproj">
-      <Project>{24beebe3-8ea3-4259-818d-9b1501720b22}</Project>
-      <Name>Selection</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\Shell\Shell.csproj">
-      <Project>{25ec2ae7-82fa-4a99-9b76-606652c41a45}</Project>
-      <Name>Shell</Name>
+    <ProjectReference Include="..\IListSorter\IListSorter.csproj">
+      <Project>{2ed9e804-b5d3-4086-97e6-0c74f95652fc}</Project>
+      <Name>IListSorter</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
