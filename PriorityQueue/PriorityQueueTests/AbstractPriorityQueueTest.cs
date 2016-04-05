@@ -82,5 +82,21 @@
             Assert.AreEqual(0, queue.GetSize());
             Assert.IsTrue(queue.IsEmpty());
         }
+
+        [TestMethod]
+        public void ClearQueueTest()
+        {
+            var queue = this.CreateQueue();
+            queue.Enqueue(this.ValueA);
+            queue.Enqueue(this.ValueD);
+            queue.Enqueue(this.ValueB);
+            queue.Enqueue(this.ValueA);
+            queue.Enqueue(this.ValueC);
+
+            Assert.AreEqual(5, queue.GetSize());
+            queue.Clear();
+            Assert.AreEqual(0, queue.GetSize());
+            Assert.IsTrue(queue.IsEmpty());
+        }
     }
 }
