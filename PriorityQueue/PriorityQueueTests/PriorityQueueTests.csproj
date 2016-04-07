@@ -53,11 +53,16 @@
   </Choose>
   <ItemGroup>
     <Compile Include="AbstractPriorityQueueTest.cs" />
+    <Compile Include="HeapOrderedListPriorityQueueTest.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="SortedListPriorityQueueTest.cs" />
     <Compile Include="UnsortedListPriorityQueueTest.cs" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\HeapOrderedListPriorityQueue\HeapOrderedListPriorityQueue.csproj">
+      <Project>{22168037-e65b-421d-bd66-e1d6543744ae}</Project>
+      <Name>HeapOrderedListPriorityQueue</Name>
+    </ProjectReference>
     <ProjectReference Include="..\IQueue\IQueue.csproj">
       <Project>{91773ad4-d212-447b-acd7-0d417e853d6e}</Project>
       <Name>IQueue</Name>

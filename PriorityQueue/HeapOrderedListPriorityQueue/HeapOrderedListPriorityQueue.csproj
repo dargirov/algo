@@ -4,17 +4,15 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{C6018E45-DC4B-416B-B256-E1915D8BF7C3}</ProjectGuid>
-    <OutputType>Exe</OutputType>
+    <ProjectGuid>{22168037-E65B-421D-BD66-E1D6543744AE}</ProjectGuid>
+    <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>PriorityQueue</RootNamespace>
-    <AssemblyName>PriorityQueue</AssemblyName>
+    <RootNamespace>HeapOrderedListPriorityQueue</RootNamespace>
+    <AssemblyName>HeapOrderedListPriorityQueue</AssemblyName>
     <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
-    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
-    <PlatformTarget>AnyCPU</PlatformTarget>
     <DebugSymbols>true</DebugSymbols>
     <DebugType>full</DebugType>
     <Optimize>false</Optimize>
@@ -24,7 +22,6 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
-    <PlatformTarget>AnyCPU</PlatformTarget>
     <DebugType>pdbonly</DebugType>
     <Optimize>true</Optimize>
     <OutputPath>bin\Release\</OutputPath>
@@ -43,24 +40,13 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Program.cs" />
+    <Compile Include="HeapOrderedListPriorityQueue.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="App.config" />
-  </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="..\HeapOrderedListPriorityQueue\HeapOrderedListPriorityQueue.csproj">
-      <Project>{22168037-e65b-421d-bd66-e1d6543744ae}</Project>
-      <Name>HeapOrderedListPriorityQueue</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\SortedListPriorityQueue\SortedListPriorityQueue.csproj">
-      <Project>{271b1a42-1784-46ac-80f1-2f9c7cfed9a8}</Project>
-      <Name>SortedListPriorityQueue</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\UnsortedListPriorityQueue\UnsortedListPriorityQueue.csproj">
-      <Project>{fcc020b9-d10d-499e-b5e9-724b3ad9d556}</Project>
-      <Name>UnsortedListPriorityQueue</Name>
+    <ProjectReference Include="..\IQueue\IQueue.csproj">
+      <Project>{91773ad4-d212-447b-acd7-0d417e853d6e}</Project>
+      <Name>IQueue</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

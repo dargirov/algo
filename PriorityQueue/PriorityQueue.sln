@@ -13,6 +13,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PriorityQueueTests", "Prior
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SortedListPriorityQueue", "SortedListPriorityQueue\SortedListPriorityQueue.csproj", "{271B1A42-1784-46AC-80F1-2F9C7CFED9A8}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HeapOrderedListPriorityQueue", "HeapOrderedListPriorityQueue\HeapOrderedListPriorityQueue.csproj", "{22168037-E65B-421D-BD66-E1D6543744AE}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -39,6 +41,10 @@ Global
 		{271B1A42-1784-46AC-80F1-2F9C7CFED9A8}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{271B1A42-1784-46AC-80F1-2F9C7CFED9A8}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{271B1A42-1784-46AC-80F1-2F9C7CFED9A8}.Release|Any CPU.Build.0 = Release|Any CPU
+		{22168037-E65B-421D-BD66-E1D6543744AE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{22168037-E65B-421D-BD66-E1D6543744AE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{22168037-E65B-421D-BD66-E1D6543744AE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{22168037-E65B-421D-BD66-E1D6543744AE}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
