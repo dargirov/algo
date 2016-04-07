@@ -46,31 +46,26 @@
             var rightIndex = (2 * index) + 2;
             var leftIndex = (2 * index) + 1;
 
+            if (leftIndex >= this.GetSize())
+            {
+                return;
+            }
+
+            int largest = leftIndex;
             if (rightIndex < this.GetSize())
             {
-                var right = this.list[rightIndex];
-                var left = this.list[leftIndex];
-                var bigger = leftIndex;
-                if (right.CompareTo(left) > 0)
+                if (this.list[rightIndex].CompareTo(this.list[leftIndex]) > 0)
                 {
-                    bigger = rightIndex;
-                }
-
-                if (this.list[index].CompareTo(this.list[bigger]) < 0)
-                {
-                    this.Swap(index, bigger);
-                    this.Sink(bigger);
+                    largest = rightIndex;
                 }
             }
-            else if (leftIndex < this.GetSize())
+            
+            if (this.list[index].CompareTo(this.list[largest]) < 0)
             {
-                var left = this.list[leftIndex];
-                if (this.list[index].CompareTo(this.list[leftIndex]) < 0)
-                {
-                    this.Swap(index, leftIndex);
-                    this.Sink(leftIndex);
-                }
+                this.Swap(index, largest);
+                this.Sink(largest);
             }
+            
         }
 
         public void Enqueue(T value)
