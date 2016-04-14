@@ -27,5 +27,23 @@
                 Assert.AreEqual(i, this.searcher.Search(this.list, this.list[i]));
             }
         }
+
+        [TestMethod]
+        public void SearchForNonExistingValueLessThanFirstItemTest()
+        {
+            Assert.AreEqual(-1, this.searcher.Search(this.list, "A"));
+        }
+
+        [TestMethod]
+        public void SearchForNonExistingValueGreaterThanLastItemTest()
+        {
+            Assert.AreEqual(-13, this.searcher.Search(this.list, "Z"));
+        }
+
+        [TestMethod]
+        public void SearchForArbitraryNonExistingValueTest()
+        {
+            Assert.AreEqual(-4, this.searcher.Search(this.list, "E"));
+        }
     }
 }
