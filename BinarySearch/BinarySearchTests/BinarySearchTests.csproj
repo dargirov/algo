@@ -52,11 +52,16 @@
   <ItemGroup>
     <Compile Include="AbstractListSearcherTest.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="RecursiveBinaryListSearcherTests.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\IListSearcher\IListSearcher.csproj">
       <Project>{853ccfaf-78b4-474c-8aaf-e93fbf55ff9f}</Project>
       <Name>IListSearcher</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\RecursiveBinaryListSearcher\RecursiveBinaryListSearcher.csproj">
+      <Project>{332bce5c-3418-49a3-ae56-0a419b9843be}</Project>
+      <Name>RecursiveBinaryListSearcher</Name>
     </ProjectReference>
   </ItemGroup>
   <Choose>

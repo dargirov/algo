@@ -9,6 +9,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "IListSearcher", "IListSearc
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BinarySearchTests", "BinarySearchTests\BinarySearchTests.csproj", "{27AFD9E3-27D5-44C8-B3A0-272BC1C3AC37}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RecursiveBinaryListSearcher", "RecursiveBinaryListSearcher\RecursiveBinaryListSearcher.csproj", "{332BCE5C-3418-49A3-AE56-0A419B9843BE}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -27,6 +29,10 @@ Global
 		{27AFD9E3-27D5-44C8-B3A0-272BC1C3AC37}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{27AFD9E3-27D5-44C8-B3A0-272BC1C3AC37}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{27AFD9E3-27D5-44C8-B3A0-272BC1C3AC37}.Release|Any CPU.Build.0 = Release|Any CPU
+		{332BCE5C-3418-49A3-AE56-0A419B9843BE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{332BCE5C-3418-49A3-AE56-0A419B9843BE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{332BCE5C-3418-49A3-AE56-0A419B9843BE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{332BCE5C-3418-49A3-AE56-0A419B9843BE}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

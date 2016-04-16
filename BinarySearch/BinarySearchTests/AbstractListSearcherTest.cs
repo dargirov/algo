@@ -13,7 +13,8 @@
 
         protected abstract IListSearcher<string> CreateSearcher();
 
-        protected void Setup()
+        [TestInitialize]
+        public void Setup()
         {
             this.searcher = this.CreateSearcher();
             this.list = new List<string>(values);
